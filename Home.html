@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>What's My Ulam?</title>
+    
+</head>
+<body>
+    <div id="searchbar">
+        <div class="container">
+            
+            <input type="text" id="wordInput" placeholder="Enter an ingredient">
+            <button class="add" onclick="addWord()">+</button>
+            <button class="search" onclick="searchAndModify()">Search</button>
+            <button class="refresh" onclick="window.location.reload();">↻</button>
+            <div id="wordList" class="word-container"></div>
+            <div id="modifiedSentence"></div>
+        </div>
+    </div>
+
+    <div id="apiResponse"></div>
+      <script src="Script\script.js"></script>
+</body>
+</html>

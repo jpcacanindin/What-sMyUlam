@@ -1,0 +1,101 @@
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+  
+input[type="text"] {
+    width: 70%;
+    padding: 5px;
+    margin-right: 10px;
+}
+  
+button {
+    padding: 5px 10px;
+}
+  
+.word {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+  
+.remove-btn {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.add {
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid rgb(0, 120, 189);
+    color: rgb(0, 120, 189);
+}
+
+.add:hover {
+    background-color: rgb(0, 120, 189);
+    color: white;
+    
+}
+
+.search {
+    background-color: rgb(0, 120, 189);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 27px;
+}
+
+.search:hover {
+    background-color: white;
+    color: rgb(0, 120, 189);
+    box-shadow:inset 0px 0px 0px 1px rgb(0, 120, 189);
+}
+.refresh {
+    height: 27px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(37, 172, 32);
+    color: white;
+    font-size: 14px;
+}
+
+.refresh:hover {
+    box-shadow:inset 0px 0px 0px 1px rgb(37, 172, 32);
+    background-color: white;
+    color: rgb(37, 172, 32);
+}
+
+#modifiedSentence {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#apiResponse {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+}
+
+.word-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px; /* Adjust the gap between words as needed */
+  }
+  
+  /* Add CSS rule to the 'word' div */
+  .word {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 120, 189, 0.281); /* Add a background color to highlight each word div */
+    padding: 5px 8px;
+    border-radius: 4px;
+  }
+  
+  /* Add CSS rule to the 'x' button */
+  .remove-btn {
+    margin-right: 2px; /* Adjust the margin as needed to separate the 'x' button from the word text */
+    cursor: pointer;
+  }
