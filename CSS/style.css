@@ -75,7 +75,7 @@ button {
 #apiResponse {
     display: flex;
     justify-content: center;
-    margin: 5% 0;
+    padding: 50px
 }
 
 .word-container {
@@ -83,7 +83,7 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px; /* Adjust the gap between words as needed */
-  }
+ }
   
   /* Add CSS rule to the 'word' div */
   .word {
@@ -92,10 +92,45 @@ button {
     background-color: rgba(0, 120, 189, 0.281); /* Add a background color to highlight each word div */
     padding: 5px 8px;
     border-radius: 4px;
-  }
+}
   
   /* Add CSS rule to the 'x' button */
-  .remove-btn {
+.remove-btn {
     margin-right: 2px; /* Adjust the margin as needed to separate the 'x' button from the word text */
     cursor: pointer;
+}
+
+#downloadBtn {
+    height: 27px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(87, 87, 87);
+    color: white;
+    font-size: 12px;
+}
+
+#downloadBtn:hover {
+    box-shadow:inset 0px 0px 0px 1px rgb(87, 87, 87);
+    background-color: white;
+    color: rgb(87, 87, 87);
+}
+
+@media only screen and (max-width: 672px) {
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #wordInput {
+        padding: 0;
+        margin: 0;
+        width: 70%;
+    }
   }

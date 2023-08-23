@@ -2,6 +2,10 @@ const wordListDiv = document.getElementById('wordList');
 const wordInput = document.getElementById('wordInput');
 const modifiedSentenceDiv = document.getElementById('modifiedSentence');
 let addedWords = [];
+downloadBtn.disabled = true;
+      
+
+      
 
 function addWord() {
   const word = wordInput.value.trim();
@@ -82,6 +86,7 @@ function callChatGPTAPI(text) {
     const formattedResponse = responseText.replace(/\n/g, '<br>');
     
     displayAPIResponse(formattedResponse); // Call the displayAPIResponse function with the API response
+    downloadBtn.disabled = false;
   })
   .catch(error => console.error('Error:', error));
 }
@@ -95,4 +100,23 @@ function displayAPIResponse(responseText) {
     responseContainer.innerHTML = responseText;
 
     console.log(responseText);
-  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const downloadBtn = document.getElementById('downloadBtn');
+  const content = document.getElementById('apiResponse');
+
+  downloadBtn.addEventListener('click', function () {
+      // Use html2canvas to capture the content of the div as an image
+      html2canvas(content).then(function (canvas) {
+          // Convert the canvas to a data URL
+          const imgData = canvas.toDataURL('image/png');
+          
+          // Create a link element to trigger the download
+          const link = document.createElement('a');
+          link.href = imgData;
+          link.download = 'Recipe.png';
+          link.click();
+      });
+  });
+});

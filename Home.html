@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
     <link rel="stylesheet" href="CSS/style.css">
     <title>What's My Ulam?</title>
     
@@ -12,9 +13,13 @@
         <div class="container">
             
             <input type="text" id="wordInput" placeholder="Enter an ingredient">
-            <button class="add" onclick="addWord()">+</button>
-            <button class="search" onclick="searchAndModify()">Search</button>
-            <button class="refresh" onclick="window.location.reload();">↻</button>
+            <div class="buttons">
+                <button class="add" title="Add" onclick="addWord()">+</button>
+                <button class="search" title="Search" onclick="searchAndModify()">Search</button>
+                <button class="refresh" title="Reload" onclick="window.location.reload();">↻</button>
+                <button id="downloadBtn" title="Download">🖶</button>
+            </div>
+            
             <div id="wordList" class="word-container"></div>
             <div id="modifiedSentence"></div>
         </div>
